@@ -12,7 +12,8 @@
         }
     },
     "variables": {
-        "acrname": "[concat(parameters('environmentname'),'acr')]"
+        "acrname": "[concat(parameters('environmentname'),'acr')]",
+        "vnetname": "[concat(parameters('environmentname'), 'vnet')]"
     },
     "resources": [
         {
@@ -28,6 +29,23 @@
                 "parameters":{
                     "acrName": {
                         "value": "[variables('acrname')]"
+                    }
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "linkedTemplate",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[concat(parameters('githuburl'),'vnet.json')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters":{
+                    "virtualNetworkName": {
+                        "value": "[variables('vnetname')]"
                     }
                 }
             }
