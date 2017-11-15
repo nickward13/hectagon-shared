@@ -2,8 +2,17 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "environmentname": {
+            "type": "string",
+            "defaultValue": "hectagon-shared"
+        },
+        "githuburl": {
+            "type": "string",
+            "defaultValue": "https://raw.githubusercontent.com/nickward13/hectagon-shared/master/"
+        }
     },
     "variables": {
+        "acrname": "[concat(parameters('environmentname'),'-acr')]"
     },
     "resources": [
         {
@@ -11,10 +20,15 @@
             "name": "linkedTemplate",
             "type": "Microsoft.Resources/deployments",
             "properties": {
-                "mode": "incremental",
+                "mode": "Incremental",
                 "templateLink": {
-                    "uri": "https://raw.githubusercontent.com/nickward13/hectagon-shared/master/acr.json",
+                    "uri": "[concat(parameters('githuburl'),'acr.json')]",
                     "contentVersion": "1.0.0.0"
+                },
+                "parameters":{
+                    "acrName": {
+                        "value": "[variables('acrname')]"
+                    }
                 }
             }
         }
