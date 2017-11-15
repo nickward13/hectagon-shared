@@ -57,7 +57,7 @@
         "location": "[resourceGroup().location]",
         "comments": "Container registry for storing docker images",
         "dependsOn": [
-          "[variables('acrStorageId')]"
+          "[concat('Storage/storageAccounts', variables('acrStorageName'))]"
         ],
         "tags": {
           "displayName": "Container Registry",
