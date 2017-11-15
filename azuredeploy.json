@@ -6,6 +6,18 @@
     "variables": {
     },
     "resources": [
+        {
+            "apiVersion": "2017-05-10",
+            "name": "linkedTemplate",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "https://raw.githubusercontent.com/nickward13/hectagon-shared/master/acr.json",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        }
     ],
     "outputs": {
       
