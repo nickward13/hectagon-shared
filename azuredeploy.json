@@ -4,7 +4,7 @@
     "parameters": {
         "environmentname": {
             "type": "string",
-            "defaultValue": "hectagon-shared"
+            "defaultValue": "hectagon"
         },
         "githuburl": {
             "type": "string",
@@ -12,7 +12,7 @@
         }
     },
     "variables": {
-        "acrname": "[concat(parameters('environmentname'),'-acr')]"
+        "acrname": "[concat(parameters('environmentname'),'acr')]"
     },
     "resources": [
         {
