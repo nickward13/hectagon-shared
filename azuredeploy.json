@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "environmentname": {
+        "environmentName": {
             "type": "string",
             "defaultValue": "hectagon"
         },
@@ -12,8 +12,7 @@
         }
     },
     "variables": {
-        "acrname": "[concat(parameters('environmentname'),'acr')]",
-        "vnetname": "[concat(parameters('environmentname'), 'vnet')]"
+        "acrname": "[concat(parameters('environmentName'),'acr')]"
     },
     "resources": [
         {
@@ -44,8 +43,8 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters":{
-                    "virtualNetworkName": {
-                        "value": "[variables('vnetname')]"
+                    "environmentName": {
+                        "value": "[parameters('environmentName')]"
                     }
                 }
             }
