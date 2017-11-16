@@ -3,4 +3,4 @@
 az login
 
 az group create --name hectagon-shared-test --location "West US"
-az group deployment create --resource-group hectagon-shared-test --template-file azuredeploy.json
+az group deployment create --resource-group hectagon-shared-test --template-file azuredeploy.json --parameters @azuredeploy.parameters.test.json
