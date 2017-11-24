@@ -37,7 +37,7 @@
           },
           {
             "name": "windowscontainers",
-            "properties":{
+            "properties": {
               "addressPrefix": "10.0.10.0/24",
               "networkSecurityGroup": {
                 "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
@@ -46,14 +46,20 @@
           },
           {
             "name": "jumpbox",
-            "properties":{
+            "properties": {
               "addressPrefix": "10.0.1.0/24"
             }
           },
           {
             "name": "servicefabric",
-            "properties":{
+            "properties": {
               "addressPrefix": "10.0.2.0/24"
+            }
+          },
+          {
+            "name": "apim",
+            "properties":{
+              "addressPrefix": "10.0.3.0/24"
             }
           }
         ]
@@ -123,6 +129,24 @@
             }
           }
         ]
+      }
+    },
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "name": "sf-vnet-security",
+      "apiVersion": "2017-06-01",
+      "location": "[resourceGroup().location]",
+      "tags": {
+        "resourceType": "Service Fabric"
+      }
+    },
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "name": "apim-vnet-security",
+      "apiVersion": "2017-06-01",
+      "location": "[resourceGroup().location]",
+      "tags": {
+        "resourceType": "API Management"
       }
     }
   ]
