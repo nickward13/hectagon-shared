@@ -133,15 +133,6 @@
     },
     {
       "type": "Microsoft.Network/networkSecurityGroups",
-      "name": "sf-vnet-security",
-      "apiVersion": "2017-06-01",
-      "location": "[resourceGroup().location]",
-      "tags": {
-        "resourceType": "Service Fabric"
-      }
-    },
-    {
-      "type": "Microsoft.Network/networkSecurityGroups",
       "name": "apim-vnet-security",
       "apiVersion": "2017-06-01",
       "location": "[resourceGroup().location]",
