@@ -48,6 +48,23 @@
                     }
                 }
             }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "cloudStorageAccountLinkedTemplate",
+            "type": "Microsoft.Resources/deployments",
+            "properties":{
+                "mode": "Incremental",
+                "templateLink":{
+                    "uri": "[concat(parameters('githuburl'), 'cloudstorageaccount.json')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters":{
+                    "environmentName": {
+                        "value": "[parameters('environmentName')]"
+                    }
+                }
+            }
         }
     ],
     "outputs": {
