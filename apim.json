@@ -1,0 +1,2218 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "environmentName": {
+            "type": "String",
+            "defaultValue": "hectagon"
+        },
+        "users_1_name": {
+            "defaultValue": "1",
+            "type": "String"
+        },
+        "groups_guests_name": {
+            "defaultValue": "guests",
+            "type": "String"
+        },
+        "policies_policy_name": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "groups_developers_name": {
+            "defaultValue": "developers",
+            "type": "String"
+        },
+        "groups_administrators_name": {
+            "defaultValue": "administrators",
+            "type": "String"
+        },
+        "identityProviders_Aad_name": {
+            "defaultValue": "Aad",
+            "type": "String"
+        },
+        "users_1_name_1": {
+            "defaultValue": "1",
+            "type": "String"
+        },
+        "apis_57ce4e6c0f226b0f6cec070d_name": {
+            "defaultValue": "57ce4e6c0f226b0f6cec070d",
+            "type": "String"
+        },
+        "apis_57ce896e0f226b0f6cec0711_name": {
+            "defaultValue": "57ce896e0f226b0f6cec0711",
+            "type": "String"
+        },
+        "apis_58e33be9cd797fcd01b5b357_name": {
+            "defaultValue": "58e33be9cd797fcd01b5b357",
+            "type": "String"
+        },
+        "apis_57ce4ae80f226b0f6cec070c_name": {
+            "defaultValue": "57ce4ae80f226b0f6cec070c",
+            "type": "String"
+        },
+        "users_1_name_2": {
+            "defaultValue": "1",
+            "type": "String"
+        },
+        "templates_AccountClosedDeveloper_name": {
+            "defaultValue": "AccountClosedDeveloper",
+            "type": "String"
+        },
+        "products_57ce3a3ebff1b90080060001_name": {
+            "defaultValue": "57ce3a3ebff1b90080060001",
+            "type": "String"
+        },
+        "products_57ce3a3ebff1b90080060002_name": {
+            "defaultValue": "57ce3a3ebff1b90080060002",
+            "type": "String"
+        },
+        "templates_EmailChangeIdentityDefault_name": {
+            "defaultValue": "EmailChangeIdentityDefault",
+            "type": "String"
+        },
+        "templates_NewIssueNotificationMessage_name": {
+            "defaultValue": "NewIssueNotificationMessage",
+            "type": "String"
+        },
+        "subscriptions_59dee8bb85e63f0ea4b99d1e_name": {
+            "defaultValue": "59dee8bb85e63f0ea4b99d1e",
+            "type": "String"
+        },
+        "subscriptions_59dee8be85e63f0ea4b99d1f_name": {
+            "defaultValue": "59dee8be85e63f0ea4b99d1f",
+            "type": "String"
+        },
+        "templates_ConfirmSignUpIdentityDefault_name": {
+            "defaultValue": "ConfirmSignUpIdentityDefault",
+            "type": "String"
+        },
+        "templates_PasswordResetIdentityDefault_name": {
+            "defaultValue": "PasswordResetIdentityDefault",
+            "type": "String"
+        },
+        "templates_InviteUserNotificationMessage_name": {
+            "defaultValue": "InviteUserNotificationMessage",
+            "type": "String"
+        },
+        "templates_NewCommentNotificationMessage_name": {
+            "defaultValue": "NewCommentNotificationMessage",
+            "type": "String"
+        },
+        "templates_NewDeveloperNotificationMessage_name": {
+            "defaultValue": "NewDeveloperNotificationMessage",
+            "type": "String"
+        },
+        "templates_RejectDeveloperNotificationMessage_name": {
+            "defaultValue": "RejectDeveloperNotificationMessage",
+            "type": "String"
+        },
+        "authorizationServers_57fd75b10f226b12ccd93be0_name": {
+            "defaultValue": "57fd75b10f226b12ccd93be0",
+            "type": "String"
+        },
+        "templates_RequestDeveloperNotificationMessage_name": {
+            "defaultValue": "RequestDeveloperNotificationMessage",
+            "type": "String"
+        },
+        "templates_PurchaseDeveloperNotificationMessage_name": {
+            "defaultValue": "PurchaseDeveloperNotificationMessage",
+            "type": "String"
+        },
+        "groups_guests_name_1": {
+            "defaultValue": "guests",
+            "type": "String"
+        },
+        "groups_guests_name_2": {
+            "defaultValue": "guests",
+            "type": "String"
+        },
+        "templates_ApplicationApprovedNotificationMessage_name": {
+            "defaultValue": "ApplicationApprovedNotificationMessage",
+            "type": "String"
+        },
+        "templates_PasswordResetByAdminNotificationMessage_name": {
+            "defaultValue": "PasswordResetByAdminNotificationMessage",
+            "type": "String"
+        },
+        "policies_policy_name_1": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "groups_developers_name_1": {
+            "defaultValue": "developers",
+            "type": "String"
+        },
+        "groups_developers_name_2": {
+            "defaultValue": "developers",
+            "type": "String"
+        },
+        "groups_administrators_name_1": {
+            "defaultValue": "administrators",
+            "type": "String"
+        },
+        "groups_administrators_name_2": {
+            "defaultValue": "administrators",
+            "type": "String"
+        },
+        "templates_QuotaLimitApproachingDeveloperNotificationMessage_name": {
+            "defaultValue": "QuotaLimitApproachingDeveloperNotificationMessage",
+            "type": "String"
+        },
+        "schemas_57ce4ae90f226b0d142ab887_name": {
+            "defaultValue": "57ce4ae90f226b0d142ab887",
+            "type": "String"
+        },
+        "apis_58e33be9cd797fcd01b5b357_name_1": {
+            "defaultValue": "58e33be9cd797fcd01b5b357",
+            "type": "String"
+        },
+        "apis_57ce4ae80f226b0f6cec070c_name_1": {
+            "defaultValue": "57ce4ae80f226b0f6cec070c",
+            "type": "String"
+        },
+        "apis_57ce4e6c0f226b0f6cec070d_name_1": {
+            "defaultValue": "57ce4e6c0f226b0f6cec070d",
+            "type": "String"
+        },
+        "apis_57ce896e0f226b0f6cec0711_name_1": {
+            "defaultValue": "57ce896e0f226b0f6cec0711",
+            "type": "String"
+        },
+        "apis_58e33be9cd797fcd01b5b357_name_2": {
+            "defaultValue": "58e33be9cd797fcd01b5b357",
+            "type": "String"
+        },
+        "apis_57ce4ae80f226b0f6cec070c_name_2": {
+            "defaultValue": "57ce4ae80f226b0f6cec070c",
+            "type": "String"
+        },
+        "operations_57ce4fe60f226b0f6cec070e_name": {
+            "defaultValue": "57ce4fe60f226b0f6cec070e",
+            "type": "String"
+        },
+        "operations_57ce62070f226b0f6cec0710_name": {
+            "defaultValue": "57ce62070f226b0f6cec0710",
+            "type": "String"
+        },
+        "operations_57ce607c0f226b0f6cec070f_name": {
+            "defaultValue": "57ce607c0f226b0f6cec070f",
+            "type": "String"
+        },
+        "operations_58a38f1a1313441238e46086_name": {
+            "defaultValue": "58a38f1a1313441238e46086",
+            "type": "String"
+        },
+        "operations_57ce8db70f226b0f6cec0717_name": {
+            "defaultValue": "57ce8db70f226b0f6cec0717",
+            "type": "String"
+        },
+        "operations_57ce8c4d0f226b0f6cec0714_name": {
+            "defaultValue": "57ce8c4d0f226b0f6cec0714",
+            "type": "String"
+        },
+        "operations_57ce8b2e0f226b0f6cec0713_name": {
+            "defaultValue": "57ce8b2e0f226b0f6cec0713",
+            "type": "String"
+        },
+        "operations_57ce8c9b0f226b0f6cec0715_name": {
+            "defaultValue": "57ce8c9b0f226b0f6cec0715",
+            "type": "String"
+        },
+        "operations_57ce8d470f226b0f6cec0716_name": {
+            "defaultValue": "57ce8d470f226b0f6cec0716",
+            "type": "String"
+        },
+        "operations_57ce89b60f226b0f6cec0712_name": {
+            "defaultValue": "57ce89b60f226b0f6cec0712",
+            "type": "String"
+        },
+        "operations_58e33cc70cd0c5f7f2be91a5_name": {
+            "defaultValue": "58e33cc70cd0c5f7f2be91a5",
+            "type": "String"
+        },
+        "operations_57ce4aeb0f226b0d142ab88d_name": {
+            "defaultValue": "57ce4aeb0f226b0d142ab88d",
+            "type": "String"
+        },
+        "operations_57ce4aeb0f226b0d142ab889_name": {
+            "defaultValue": "57ce4aeb0f226b0d142ab889",
+            "type": "String"
+        },
+        "operations_57ce4aeb0f226b0d142ab88c_name": {
+            "defaultValue": "57ce4aeb0f226b0d142ab88c",
+            "type": "String"
+        },
+        "operations_57ce4aeb0f226b0d142ab88a_name": {
+            "defaultValue": "57ce4aeb0f226b0d142ab88a",
+            "type": "String"
+        },
+        "operations_57ce4aeb0f226b0d142ab888_name": {
+            "defaultValue": "57ce4aeb0f226b0d142ab888",
+            "type": "String"
+        },
+        "operations_57ce4aeb0f226b0d142ab88b_name": {
+            "defaultValue": "57ce4aeb0f226b0d142ab88b",
+            "type": "String"
+        },
+        "policies_policy_name_2": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_3": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_4": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_5": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_6": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_7": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_8": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_9": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_10": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_11": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_12": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_13": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_14": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_15": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_16": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_17": {
+            "defaultValue": "policy",
+            "type": "String"
+        },
+        "policies_policy_name_18": {
+            "defaultValue": "policy",
+            "type": "String"
+        }
+    },
+    "variables": {
+        "api_service_name": "[concat(variables('environmentName'), 'api')]"
+    },
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourceGroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi'.",
+            "type": "Microsoft.ApiManagement/service",
+            "sku": {
+                "name": "Developer",
+                "capacity": 1
+            },
+            "name": "[variables('api_service_name')]",
+            "apiVersion": "2017-03-01",
+            "location": "Australia Southeast",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "publisherEmail": "nickward@microsoft.com",
+                "publisherName": "Hectagon",
+                "notificationSenderEmail": "apimgmt-noreply@mail.windowsazure.com",
+                "hostnameConfigurations": [],
+                "additionalLocations": null,
+                "virtualNetworkConfiguration": null,
+                "customProperties": null,
+                "virtualNetworkType": "None",
+                "certificates": null
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4e6c0f226b0f6cec070d'.",
+            "type": "Microsoft.ApiManagement/service/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Notification API",
+                "apiRevision": "1",
+                "description": "An API to send e-mail and push notifications when tasks are completed.",
+                "serviceUrl": "https://prod-03.australiasoutheast.logic.azure.com:443",
+                "path": "notifications",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711'.",
+            "type": "Microsoft.ApiManagement/service/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Project API",
+                "apiRevision": "1",
+                "description": "An API for creating, managing, completing and adding tasks to projects.",
+                "serviceUrl": "http://cadclusterkyfdbfrmncr7i.australiasoutheast.cloudapp.azure.com/api/project",
+                "path": "project",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/58e33be9cd797fcd01b5b357'.",
+            "type": "Microsoft.ApiManagement/service/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_58e33be9cd797fcd01b5b357_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Service Providers API",
+                "apiRevision": "1",
+                "description": "All our service providers are provided via this API",
+                "serviceUrl": "https://service-provider-functions.azurewebsites.net/",
+                "path": "serviceprovider",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c'.",
+            "type": "Microsoft.ApiManagement/service/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Task API",
+                "apiRevision": "1",
+                "description": "An API for creating, completing and deleting tasks.",
+                "serviceUrl": "http://tasksservice.azurewebsites.net",
+                "path": "task",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/authorizationServers/57fd75b10f226b12ccd93be0'.",
+            "type": "Microsoft.ApiManagement/service/authorizationServers",
+            "name": "[concat(variables('api_service_name'), '/', parameters('authorizationServers_57fd75b10f226b12ccd93be0_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "AzureAD Microsoft Tenant",
+                "description": "The Microsoft AAD tenant",
+                "clientRegistrationEndpoint": "http://localhost",
+                "authorizationEndpoint": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/oauth2/authorize?api-version=1.0",
+                "authorizationMethods": [
+                    "GET"
+                ],
+                "clientAuthenticationMethod": [
+                    "Body"
+                ],
+                "tokenBodyParameters": [
+                    {
+                        "name": "resource",
+                        "value": "https://taskserviceufjz75z7vr2ty.azurewebsites.net"
+                    }
+                ],
+                "tokenEndpoint": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/oauth2/token?api-version=1.0",
+                "supportState": false,
+                "defaultScope": null,
+                "grantTypes": [
+                    "authorizationCode"
+                ],
+                "bearerTokenSendingMethods": [
+                    "authorizationHeader"
+                ],
+                "clientId": "not provided when created through GIT",
+                "clientSecret": "not provided when created through GIT",
+                "resourceOwnerUsername": "not provided when created through GIT",
+                "resourceOwnerPassword": "not provided when created through GIT"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/groups/administrators'.",
+            "type": "Microsoft.ApiManagement/service/groups",
+            "name": "[concat(variables('api_service_name'), '/', parameters('groups_administrators_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "[concat(parameters('groups_administrators_name'),'Administrators', parameters('groups_administrators_name'))]",
+                "description": "[concat(parameters('groups_administrators_name'),'Administrators is a built-in group. Its membership is managed by the system. Microsoft Azure subscription ', parameters('groups_administrators_name'),' fall into this group.')]",
+                "type": "system",
+                "externalId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/groups/developers'.",
+            "type": "Microsoft.ApiManagement/service/groups",
+            "name": "[concat(variables('api_service_name'), '/', parameters('groups_developers_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "[concat(parameters('groups_developers_name'),'Developers', parameters('groups_developers_name'))]",
+                "description": "[concat(parameters('groups_developers_name'),'Developers is a built-in group. Its membership is managed by the system. Signed-in users fall into this group.')]",
+                "type": "system",
+                "externalId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/groups/guests'.",
+            "type": "Microsoft.ApiManagement/service/groups",
+            "name": "[concat(variables('api_service_name'), '/', parameters('groups_guests_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "[concat(parameters('groups_guests_name'),'Guests', parameters('groups_guests_name'))]",
+                "description": "[concat(parameters('groups_guests_name'),'Guests is a built-in group. Its membership is managed by the system. Unauthenticated users visiting the developer portal fall into this group.')]",
+                "type": "system",
+                "externalId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/identityProviders/Aad'.",
+            "type": "Microsoft.ApiManagement/service/identityProviders",
+            "name": "[concat(variables('api_service_name'), '/', parameters('identityProviders_Aad_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "clientId": "not provided when created through GIT",
+                "clientSecret": "not provided when created through GIT",
+                "type": "[concat(parameters('identityProviders_Aad_name'),'aad', parameters('identityProviders_Aad_name'))]",
+                "allowedTenants": [
+                    "microsoft.com",
+                    "microsoft.onmicrosoft.com"
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('policies_policy_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "[concat('<!--\r\n    IMPORTANT:\r\n    - Policy elements can appear only within the <inbound>, <outbound>, <backend> section elements.\r\n    - Only the <forward-request> ', parameters('policies_policy_name'),' element can appear within the <backend> section element.\r\n    - To apply a ', parameters('policies_policy_name'),' to the incoming request (before it is forwarded to the backend service), place a corresponding ', parameters('policies_policy_name'),' element within the <inbound> section element.\r\n    - To apply a ', parameters('policies_policy_name'),' to the outgoing response (before it is sent back to the caller), place a corresponding ', parameters('policies_policy_name'),' element within the <outbound> section element.\r\n    - To add a ', parameters('policies_policy_name'),' position the cursor at the desired insertion point and click on the round button associated with the ', parameters('policies_policy_name'),'.\r\n    - To remove a ', parameters('policies_policy_name'),', delete the corresponding ', parameters('policies_policy_name'),' statement from the ', parameters('policies_policy_name'),' document.\r\n    - Policies are applied in the order of their appearance, from the top down.\r\n-->\r\n<policies>\r\n  <inbound />\r\n  <backend>\r\n    <forward-request />\r\n  </backend>\r\n  <outbound />\r\n</policies>')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060001'.",
+            "type": "Microsoft.ApiManagement/service/products",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060001_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Starter",
+                "description": "Subscribers will be able to run 5 calls/minute up to a maximum of 100 calls/week.",
+                "terms": "",
+                "subscriptionRequired": true,
+                "approvalRequired": false,
+                "subscriptionsLimit": 1,
+                "state": "published"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060002'.",
+            "type": "Microsoft.ApiManagement/service/products",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060002_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Unlimited",
+                "description": "Subscribers have completely unlimited access to the API. Administrator approval is required.",
+                "terms": null,
+                "subscriptionRequired": true,
+                "approvalRequired": true,
+                "subscriptionsLimit": 1,
+                "state": "published"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/subscriptions/59dee8bb85e63f0ea4b99d1e'.",
+            "type": "Microsoft.ApiManagement/service/subscriptions",
+            "name": "[concat(variables('api_service_name'), '/', parameters('subscriptions_59dee8bb85e63f0ea4b99d1e_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "userId": "[resourceId('Microsoft.ApiManagement/service/users', variables('api_service_name'), parameters('users_1_name'))]",
+                "productId": "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060001_name'))]",
+                "displayName": null,
+                "state": "active",
+                "primaryKey": "1b27d1a6342d4002936b26f4a1e5af32",
+                "secondaryKey": "0e874708135243c99b9d5310c4efd776"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/users', variables('api_service_name'), parameters('users_1_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060001_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/subscriptions/59dee8be85e63f0ea4b99d1f'.",
+            "type": "Microsoft.ApiManagement/service/subscriptions",
+            "name": "[concat(variables('api_service_name'), '/', parameters('subscriptions_59dee8be85e63f0ea4b99d1f_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "userId": "[resourceId('Microsoft.ApiManagement/service/users', variables('api_service_name'), parameters('users_1_name'))]",
+                "productId": "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060002_name'))]",
+                "displayName": null,
+                "state": "active",
+                "primaryKey": "b1f505b30773415f865fc3ee99c65f6a",
+                "secondaryKey": "cca4a7d76ec0406794f90ff114c820e0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/users', variables('api_service_name'), parameters('users_1_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060002_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/ApplicationApprovedNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_ApplicationApprovedNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Your application $AppName is published in the application gallery",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          We are happy to let you know that your request to publish the $AppName application in the application gallery has been approved. Your application has been published and can be viewed <a href=\"http://$DevPortalUrl/Applications/Details/$AppId\">here</a>.\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Best,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">The $OrganizationName API Team</p>\r\n  </body>\r\n</html>",
+                "title": "Application gallery submission approved",
+                "description": "Developers who submitted their application for publication in the application gallery on the developer portal receive this email after their submission is approved.",
+                "parameters": [
+                    {
+                        "name": "AppId",
+                        "title": "Application id",
+                        "description": null
+                    },
+                    {
+                        "name": "AppName",
+                        "title": "Application name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/AccountClosedDeveloper'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_AccountClosedDeveloper_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Thank you for using the $OrganizationName API!",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          On behalf of $OrganizationName and our customers we thank you for giving us a try. Your $OrganizationName API account is now closed.\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Thank you,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Your $OrganizationName Team</p>\r\n    <a href=\"$DevPortalUrl\">$DevPortalUrl</a>\r\n    <p />\r\n  </body>\r\n</html>",
+                "title": "Developer farewell letter",
+                "description": "Developers receive this fairwell email after they close their account.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/QuotaLimitApproachingDeveloperNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_QuotaLimitApproachingDeveloperNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "You are approaching an API quota limit",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head>\r\n    <style>\r\n          body {font-size:12pt; font-family:\"Segoe UI\",\"Segoe WP\",\"Tahoma\",\"Arial\",\"sans-serif\";}\r\n          .alert { color: red; }\r\n          .child1 { padding-left: 20px; }\r\n          .child2 { padding-left: 40px; }\r\n          .number { text-align: right; }\r\n          .text { text-align: left; }\r\n          th, td { padding: 4px 10px; min-width: 100px; }\r\n          th { background-color: #DDDDDD;}\r\n        </style>\r\n  </head>\r\n  <body>\r\n    <p>Greetings $DevFirstName $DevLastName!</p>\r\n    <p>\r\n          You are approaching the quota limit on you subscription to the <strong>$ProdName</strong> product (primary key $SubPrimaryKey).\r\n          #if ($QuotaResetDate != \"\")\r\n          This quota will be renewed on $QuotaResetDate.\r\n          #else\r\n          This quota will not be renewed.\r\n          #end\r\n        </p>\r\n    <p>Below are details on quota usage for the subscription:</p>\r\n    <p>\r\n      <table>\r\n        <thead>\r\n          <th class=\"text\">Quota Scope</th>\r\n          <th class=\"number\">Calls</th>\r\n          <th class=\"number\">Call Quota</th>\r\n          <th class=\"number\">Bandwidth</th>\r\n          <th class=\"number\">Bandwidth Quota</th>\r\n        </thead>\r\n        <tbody>\r\n          <tr>\r\n            <td class=\"text\">Subscription</td>\r\n            <td class=\"number\">\r\n                  #if ($CallsAlert == true)\r\n                  <span class=\"alert\">$Calls</span>\r\n                  #else\r\n                  $Calls\r\n                  #end\r\n                </td>\r\n            <td class=\"number\">$CallQuota</td>\r\n            <td class=\"number\">\r\n                  #if ($BandwidthAlert == true)\r\n                  <span class=\"alert\">$Bandwidth</span>\r\n                  #else\r\n                  $Bandwidth\r\n                  #end\r\n                </td>\r\n            <td class=\"number\">$BandwidthQuota</td>\r\n          </tr>\r\n              #foreach ($api in $Apis)\r\n              <tr><td class=\"child1 text\">API: $api.Name</td><td class=\"number\">\r\n                  #if ($api.CallsAlert == true)\r\n                  <span class=\"alert\">$api.Calls</span>\r\n                  #else\r\n                  $api.Calls\r\n                  #end\r\n                </td><td class=\"number\">$api.CallQuota</td><td class=\"number\">\r\n                  #if ($api.BandwidthAlert == true)\r\n                  <span class=\"alert\">$api.Bandwidth</span>\r\n                  #else\r\n                  $api.Bandwidth\r\n                  #end\r\n                </td><td class=\"number\">$api.BandwidthQuota</td></tr>\r\n              #foreach ($operation in $api.Operations)\r\n              <tr><td class=\"child2 text\">Operation: $operation.Name</td><td class=\"number\">\r\n                  #if ($operation.CallsAlert == true)\r\n                  <span class=\"alert\">$operation.Calls</span>\r\n                  #else\r\n                  $operation.Calls\r\n                  #end\r\n                </td><td class=\"number\">$operation.CallQuota</td><td class=\"number\">\r\n                  #if ($operation.BandwidthAlert == true)\r\n                  <span class=\"alert\">$operation.Bandwidth</span>\r\n                  #else\r\n                  $operation.Bandwidth\r\n                  #end\r\n                </td><td class=\"number\">$operation.BandwidthQuota</td></tr>\r\n              #end\r\n              #end\r\n            </tbody>\r\n      </table>\r\n    </p>\r\n    <p>Thank you,</p>\r\n    <p>$OrganizationName API Team</p>\r\n    <a href=\"$DevPortalUrl\">$DevPortalUrl</a>\r\n    <p />\r\n  </body>\r\n</html>",
+                "title": "Developer quota limit approaching notification",
+                "description": "Developers receive this email to alert them when they are approaching a quota limit.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "ProdName",
+                        "title": "Product name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "SubPrimaryKey",
+                        "title": "Primary Subscription key",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    },
+                    {
+                        "name": "QuotaResetDate",
+                        "title": "Quota reset date",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/NewDeveloperNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_NewDeveloperNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Welcome to the $OrganizationName API!",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <title>Letter</title>\r\n  </head>\r\n  <body>\r\n    <h1 style=\"color:#000505;font-size:18pt;font-family:'Segoe UI'\">\r\n          Welcome to <span style=\"color:#003363\">$OrganizationName API!</span></h1>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Your $OrganizationName API program registration is completed and we are thrilled to have you as a customer. Here are a few important bits of information for your reference:</p>\r\n    <table width=\"100%\" style=\"margin:20px 0\">\r\n      <tr>\r\n            #if ($IdentityProvider == \"Basic\")\r\n            <td width=\"50%\" style=\"height:40px;vertical-align:top;font-family:'Segoe UI';font-size:12pt\">\r\n              Please use the following <strong>username</strong> when signing into any of the ${OrganizationName}-hosted developer portals:\r\n            </td><td style=\"vertical-align:top;font-family:'Segoe UI';font-size:12pt\"><strong>$DevUsername</strong></td>\r\n            #else\r\n            <td width=\"50%\" style=\"height:40px;vertical-align:top;font-family:'Segoe UI';font-size:12pt\">\r\n              Please use the following <strong>$IdentityProvider account</strong> when signing into any of the ${OrganizationName}-hosted developer portals:\r\n            </td><td style=\"vertical-align:top;font-family:'Segoe UI';font-size:12pt\"><strong>$DevUsername</strong></td>            \r\n            #end\r\n          </tr>\r\n      <tr>\r\n        <td style=\"height:40px;vertical-align:top;font-family:'Segoe UI';font-size:12pt\">\r\n              We will direct all communications to the following <strong>email address</strong>:\r\n            </td>\r\n        <td style=\"vertical-align:top;font-family:'Segoe UI';font-size:12pt\">\r\n          <a href=\"mailto:$DevEmail\" style=\"text-decoration:none\">\r\n            <strong>$DevEmail</strong>\r\n          </a>\r\n        </td>\r\n      </tr>\r\n    </table>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Best of luck in your API pursuits!</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">$OrganizationName API Team</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n      <a href=\"$DevPortalUrl\">$DevPortalUrl</a>\r\n    </p>\r\n  </body>\r\n</html>",
+                "title": "Developer welcome letter",
+                "description": "Developers receive this “welcome” email after they confirm their new account.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevUsername",
+                        "title": "Developer user name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevEmail",
+                        "title": "Developer email",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    },
+                    {
+                        "name": "IdentityProvider",
+                        "title": "Identity Provider selected by Organization",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/EmailChangeIdentityDefault'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_EmailChangeIdentityDefault_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Please confirm the new email associated with your $OrganizationName API account",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <title>Letter</title>\r\n  </head>\r\n  <body>\r\n    <table width=\"100%\">\r\n      <tr>\r\n        <td>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\"></p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">You are receiving this email because you made a change to the email address on your $OrganizationName API account.</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Please click on the following link to confirm the change:</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n            <a id=\"confirmUrl\" href=\"$ConfirmUrl\" style=\"text-decoration:none\">\r\n              <strong>$ConfirmUrl</strong>\r\n            </a>\r\n          </p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">If clicking the link does not work, please copy-and-paste or re-type it into your browser's address bar and hit \"Enter\".</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Thank you,</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">$OrganizationName API Team</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n            <a href=\"$DevPortalUrl\">$DevPortalUrl</a>\r\n          </p>\r\n        </td>\r\n      </tr>\r\n    </table>\r\n  </body>\r\n</html>",
+                "title": "Email change confirmation",
+                "description": "Developers receive this email to confirm a new e-mail address after they change their existing one associated with their account.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    },
+                    {
+                        "name": "ConfirmUrl",
+                        "title": "Developer confirmation URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/InviteUserNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_InviteUserNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "You are invited to join the $OrganizationName developer network",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          Your account has been created. Please follow the link below to visit the $OrganizationName developer portal and claim it:\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n      <a href=\"$ConfirmUrl\">$ConfirmUrl</a>\r\n    </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Best,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">The $OrganizationName API Team</p>\r\n  </body>\r\n</html>",
+                "title": "Invite user",
+                "description": "An e-mail invitation to create an account, sent on request by API publishers.",
+                "parameters": [
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "ConfirmUrl",
+                        "title": "Confirmation link",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/NewCommentNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_NewCommentNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "$IssueName issue has a new comment",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">This is a brief note to let you know that $CommenterFirstName $CommenterLastName made the following comment on the issue $IssueName you created:</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">$CommentText</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          To view the issue on the developer portal click <a href=\"http://$DevPortalUrl/issues/$IssueId\">here</a>.\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Best,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">The $OrganizationName API Team</p>\r\n  </body>\r\n</html>",
+                "title": "New comment added to an issue",
+                "description": "Developers receive this email when someone comments on the issue they created on the Issues page of the developer portal.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "CommenterFirstName",
+                        "title": "Commenter first name",
+                        "description": null
+                    },
+                    {
+                        "name": "CommenterLastName",
+                        "title": "Commenter last name",
+                        "description": null
+                    },
+                    {
+                        "name": "IssueId",
+                        "title": "Issue id",
+                        "description": null
+                    },
+                    {
+                        "name": "IssueName",
+                        "title": "Issue name",
+                        "description": null
+                    },
+                    {
+                        "name": "CommentText",
+                        "title": "Comment text",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/ConfirmSignUpIdentityDefault'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_ConfirmSignUpIdentityDefault_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Please confirm your new $OrganizationName API account",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <title>Letter</title>\r\n  </head>\r\n  <body>\r\n    <table width=\"100%\">\r\n      <tr>\r\n        <td>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\"></p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Thank you for joining the $OrganizationName API program! We host a growing number of cool APIs and strive to provide an awesome experience for API developers.</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">First order of business is to activate your account and get you going. To that end, please click on the following link:</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n            <a id=\"confirmUrl\" href=\"$ConfirmUrl\" style=\"text-decoration:none\">\r\n              <strong>$ConfirmUrl</strong>\r\n            </a>\r\n          </p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">If clicking the link does not work, please copy-and-paste or re-type it into your browser's address bar and hit \"Enter\".</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Thank you,</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">$OrganizationName API Team</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n            <a href=\"$DevPortalUrl\">$DevPortalUrl</a>\r\n          </p>\r\n        </td>\r\n      </tr>\r\n    </table>\r\n  </body>\r\n</html>",
+                "title": "New developer account confirmation",
+                "description": "Developers receive this email to confirm their e-mail address after they sign up for a new account.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    },
+                    {
+                        "name": "ConfirmUrl",
+                        "title": "Developer activation URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/NewIssueNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_NewIssueNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Your request $IssueName was received",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Thank you for contacting us. Our API team will review your issue and get back to you soon.</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          Click this <a href=\"http://$DevPortalUrl/issues/$IssueId\">link</a> to view or edit your request.\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Best,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">The $OrganizationName API Team</p>\r\n  </body>\r\n</html>",
+                "title": "New issue received",
+                "description": "This email is sent to developers after they create a new topic on the Issues page of the developer portal.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "IssueId",
+                        "title": "Issue id",
+                        "description": null
+                    },
+                    {
+                        "name": "IssueName",
+                        "title": "Issue name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/PurchaseDeveloperNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_PurchaseDeveloperNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Your subscription to the $ProdName",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Greetings $DevFirstName $DevLastName!</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          Thank you for subscribing to the <strong>$ProdName</strong> and welcome to the $OrganizationName developer community. We are delighted to have you as part of the team and are looking forward to the amazing applications you will build using our API!\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Below are a few subscription details for your reference:</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n      <ul>\r\n            #if ($SubStartDate != \"\")\r\n            <li style=\"font-size:12pt;font-family:'Segoe UI'\">Start date: $SubStartDate</li>\r\n            #end\r\n            \r\n            #if ($SubTerm != \"\")\r\n            <li style=\"font-size:12pt;font-family:'Segoe UI'\">Subscription term: $SubTerm</li>\r\n            #end\r\n          </ul>\r\n    </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n            Visit the developer <a href=\"http://$DevPortalUrl/developer\">profile area</a> to manage your subscription and subscription keys\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">A couple of pointers to help get you started:</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n      <strong>\r\n        <a href=\"http://$DevPortalUrl/docs/services\">Learn about the API</a>\r\n      </strong>\r\n    </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">The API documentation provides all information necessary to make a request and to process a response. Code samples are provided per API operation in a variety of languages. Moreover, an interactive console allows making API calls directly from the developer portal without writing any code.</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n      <strong>\r\n        <a href=\"http://$DevPortalUrl/applications\">Feature your app in the app gallery</a>\r\n      </strong>\r\n    </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">You can publish your application on our gallery for increased visibility to potential new users.</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n      <strong>\r\n        <a href=\"http://$DevPortalUrl/issues\">Stay in touch</a>\r\n      </strong>\r\n    </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          If you have an issue, a question, a suggestion, a request, or if you just want to tell us something, go to the <a href=\"http://$DevPortalUrl/issues\">Issues</a> page on the developer portal and create a new topic.\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Happy hacking,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">The $OrganizationName API Team</p>\r\n    <a style=\"font-size:12pt;font-family:'Segoe UI'\" href=\"http://$DevPortalUrl\">$DevPortalUrl</a>\r\n  </body>\r\n</html>",
+                "title": "New subscription activated",
+                "description": "Developers receive this acknowledgement email after subscribing to a product.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "ProdName",
+                        "title": "Product name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "SubStartDate",
+                        "title": "Subscription start date",
+                        "description": null
+                    },
+                    {
+                        "name": "SubTerm",
+                        "title": "Subscription term",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/PasswordResetIdentityDefault'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_PasswordResetIdentityDefault_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Your password change request",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <title>Letter</title>\r\n  </head>\r\n  <body>\r\n    <table width=\"100%\">\r\n      <tr>\r\n        <td>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\"></p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">You are receiving this email because you requested to change the password on your $OrganizationName API account.</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Please click on the link below and follow instructions to create your new password:</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n            <a id=\"resetUrl\" href=\"$ConfirmUrl\" style=\"text-decoration:none\">\r\n              <strong>$ConfirmUrl</strong>\r\n            </a>\r\n          </p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">If clicking the link does not work, please copy-and-paste or re-type it into your browser's address bar and hit \"Enter\".</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Thank you,</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">$OrganizationName API Team</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n            <a href=\"$DevPortalUrl\">$DevPortalUrl</a>\r\n          </p>\r\n        </td>\r\n      </tr>\r\n    </table>\r\n  </body>\r\n</html>",
+                "title": "Password change confirmation",
+                "description": "Developers receive this email when they request a password change of their account. The purpose of the email is to verify that the account owner made the request and to provide a one-time perishable URL for changing the password.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    },
+                    {
+                        "name": "ConfirmUrl",
+                        "title": "Developer new password instruction URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/PasswordResetByAdminNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_PasswordResetByAdminNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Your password was reset",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <table width=\"100%\">\r\n      <tr>\r\n        <td>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\"></p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">The password of your $OrganizationName API account has been reset, per your request.</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n                Your new password is: <strong>$DevPassword</strong></p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Please make sure to change it next time you sign in.</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">Thank you,</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">$OrganizationName API Team</p>\r\n          <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n            <a href=\"$DevPortalUrl\">$DevPortalUrl</a>\r\n          </p>\r\n        </td>\r\n      </tr>\r\n    </table>\r\n  </body>\r\n</html>",
+                "title": "Password reset by publisher notification (Password reset by admin)",
+                "description": "Developers receive this email when the publisher resets their password.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPassword",
+                        "title": "New Developer password",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/RejectDeveloperNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_RejectDeveloperNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Your subscription request for the $ProdName",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          We would like to inform you that we reviewed your subscription request for the <strong>$ProdName</strong>.\r\n        </p>\r\n        #if ($SubDeclineReason == \"\")\r\n        <p style=\"font-size:12pt;font-family:'Segoe UI'\">Regretfully, we were unable to approve it, as subscriptions are temporarily suspended at this time.</p>\r\n        #else\r\n        <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          Regretfully, we were unable to approve it at this time for the following reason:\r\n          <div style=\"margin-left: 1.5em;\"> $SubDeclineReason </div></p>\r\n        #end\r\n        <p style=\"font-size:12pt;font-family:'Segoe UI'\"> We truly appreciate your interest. </p><p style=\"font-size:12pt;font-family:'Segoe UI'\">All the best,</p><p style=\"font-size:12pt;font-family:'Segoe UI'\">The $OrganizationName API Team</p><a style=\"font-size:12pt;font-family:'Segoe UI'\" href=\"http://$DevPortalUrl\">$DevPortalUrl</a></body>\r\n</html>",
+                "title": "Subscription request declined",
+                "description": "This email is sent to developers when their subscription requests for products requiring publisher approval is declined.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "SubDeclineReason",
+                        "title": "Reason for declining subscription",
+                        "description": null
+                    },
+                    {
+                        "name": "ProdName",
+                        "title": "Product name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/templates/RequestDeveloperNotificationMessage'.",
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "[concat(variables('api_service_name'), '/', parameters('templates_RequestDeveloperNotificationMessage_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "subject": "Your subscription request for the $ProdName",
+                "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          Thank you for your interest in our <strong>$ProdName</strong> API product!\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          We were delighted to receive your subscription request. We will promptly review it and get back to you at <strong>$DevEmail</strong>.\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Thank you,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">The $OrganizationName API Team</p>\r\n    <a style=\"font-size:12pt;font-family:'Segoe UI'\" href=\"http://$DevPortalUrl\">$DevPortalUrl</a>\r\n  </body>\r\n</html>",
+                "title": "Subscription request received",
+                "description": "This email is sent to developers to acknowledge receipt of their subscription requests for products requiring publisher approval.",
+                "parameters": [
+                    {
+                        "name": "DevFirstName",
+                        "title": "Developer first name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevLastName",
+                        "title": "Developer last name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevEmail",
+                        "title": "Developer email",
+                        "description": null
+                    },
+                    {
+                        "name": "ProdName",
+                        "title": "Product name",
+                        "description": null
+                    },
+                    {
+                        "name": "OrganizationName",
+                        "title": "Organization name",
+                        "description": null
+                    },
+                    {
+                        "name": "DevPortalUrl",
+                        "title": "Developer portal URL",
+                        "description": null
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/users/1'.",
+            "type": "Microsoft.ApiManagement/service/users",
+            "name": "[concat(variables('api_service_name'), '/', parameters('users_1_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "firstName": "Administrator",
+                "lastName": "",
+                "email": "nickward@microsoft.com",
+                "state": "active",
+                "note": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4e6c0f226b0f6cec070d/operations/57ce4fe60f226b0f6cec070e'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name'), '/', parameters('operations_57ce4fe60f226b0f6cec070e_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Send Task Complete Email",
+                "method": "POST",
+                "urlTemplate": "/SendTaskCompleteEmail/{id}",
+                "description": "An operation to send an email notifying that a task is complete.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4e6c0f226b0f6cec070d/operations/57ce62070f226b0f6cec0710'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name'), '/', parameters('operations_57ce62070f226b0f6cec0710_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Send Task Complete Notification",
+                "method": "POST",
+                "urlTemplate": "/SendTaskCompleteNotification/{id}",
+                "description": "An operation to send a notification by email and, if urgent, push notification, when a task is completed.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4e6c0f226b0f6cec070d/operations/57ce607c0f226b0f6cec070f'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name'), '/', parameters('operations_57ce607c0f226b0f6cec070f_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Send Task Complete Push Notification",
+                "method": "GET",
+                "urlTemplate": "/SendTaskCompletePushNotification/?TaskName={TaskName}",
+                "description": "An operation for sending a push notification when a task completes.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4e6c0f226b0f6cec070d/operations/58a38f1a1313441238e46086'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name'), '/', parameters('operations_58a38f1a1313441238e46086_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Send Task Complete Teams Notification",
+                "method": "GET",
+                "urlTemplate": "/SendTaskCompleteTeamsNotification/?TaskName={TaskName}",
+                "description": "An operation for sending a Microsoft Teams notification when a task completes.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4e6c0f226b0f6cec070d/operations/57ce4fe60f226b0f6cec070e/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name'), '/', parameters('operations_57ce4fe60f226b0f6cec070e_name'), '/', parameters('policies_policy_name_2'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"workflows/1ef5454219804b2f8acbb6fae1130ae4/triggers/manual/run?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=0vvAUgcYUUUdb9Jpi9dhX0XAuJ2f5lqiqwjAsI1Oniw\" />\r\n    <set-backend-service base-url=\"https://prod-04.australiasoutheast.logic.azure.com:443/\" />\r\n    <set-header name=\"Content-Type\" exists-action=\"override\">\r\n      <value>application/json</value>\r\n    </set-header>\r\n    <set-body>\r\n\t\t    @{\r\n\t\t        var id = context.Request.MatchedParameters[\"id\"];\r\n  \t\t        return String.Concat(\"{ TaskId: \", id, \" }\");\r\n\t        }\r\n        </set-body>\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'), parameters('operations_57ce4fe60f226b0f6cec070e_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4e6c0f226b0f6cec070d/operations/57ce62070f226b0f6cec0710/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name'), '/', parameters('operations_57ce62070f226b0f6cec0710_name'), '/', parameters('policies_policy_name_3'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"workflows/72b9817eee864665b136042725d78447/triggers/manual/run?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=Y-hJTxUtTlvnH7anJ20fQ5R-doG3lneZKvuWRXN85bo\" />\r\n    <set-backend-service base-url=\"https://prod-08.australiasoutheast.logic.azure.com:443/\" />\r\n    <set-header name=\"Content-Type\" exists-action=\"override\">\r\n      <value>application/json</value>\r\n    </set-header>\r\n    <set-body>\r\n\t\t    @{\r\n\t\t        var id = context.Request.MatchedParameters[\"id\"];\r\n  \t\t        return String.Concat(\"{ TaskId: \", id, \" }\");\r\n\t        }\r\n        </set-body>\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'), parameters('operations_57ce62070f226b0f6cec0710_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4e6c0f226b0f6cec070d/operations/57ce607c0f226b0f6cec070f/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name'), '/', parameters('operations_57ce607c0f226b0f6cec070f_name'), '/', parameters('policies_policy_name_4'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <set-backend-service base-url=\"https://notificationfunctions.azurewebsites.net\" />\r\n    <rewrite-uri template=\"/api/TeamsTaskNotification?code=kotNDGhc8a5j/aTaFFvdk01eGTUHjtC4mSXv4NoW9U0C8lV6OadgmA==&amp;TaskName={TaskName}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'), parameters('operations_57ce607c0f226b0f6cec070f_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4e6c0f226b0f6cec070d/operations/58a38f1a1313441238e46086/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name'), '/', parameters('operations_58a38f1a1313441238e46086_name'), '/', parameters('policies_policy_name_5'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <set-backend-service base-url=\"https://notificationfunctions.azurewebsites.net\" />\r\n    <rewrite-uri template=\"/api/TeamsTaskNotification?code=kotNDGhc8a5j/aTaFFvdk01eGTUHjtC4mSXv4NoW9U0C8lV6OadgmA==&amp;TaskName={TaskName}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4e6c0f226b0f6cec070d_name'), parameters('operations_58a38f1a1313441238e46086_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8db70f226b0f6cec0717'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8db70f226b0f6cec0717_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Add Task To Project",
+                "method": "PUT",
+                "urlTemplate": "/{name}/{taskId}",
+                "description": "An operation to add a specific task ID to an existing project.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8c4d0f226b0f6cec0714'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8c4d0f226b0f6cec0714_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Complete Project",
+                "method": "PATCH",
+                "urlTemplate": "/{name}",
+                "description": "Complete the project specified by the name.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8b2e0f226b0f6cec0713'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8b2e0f226b0f6cec0713_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Create Project",
+                "method": "POST",
+                "urlTemplate": "/{projectName}",
+                "description": "An operation to create a new project.  Pass the new project details in the body.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8c9b0f226b0f6cec0715'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8c9b0f226b0f6cec0715_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Delete Project",
+                "method": "DELETE",
+                "urlTemplate": "/{name}",
+                "description": "An operation to delete the project specified by the name passed.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8d470f226b0f6cec0716'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8d470f226b0f6cec0716_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Get Project",
+                "method": "GET",
+                "urlTemplate": "/{name}",
+                "description": "An operation to get the details of a specific project.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce89b60f226b0f6cec0712'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce89b60f226b0f6cec0712_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Get Projects",
+                "method": "GET",
+                "urlTemplate": "/",
+                "description": "Gets a collection of all projects in the system.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8db70f226b0f6cec0717/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8db70f226b0f6cec0717_name'), '/', parameters('policies_policy_name_6'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"?projectName={name}&amp;taskId={taskId}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'), parameters('operations_57ce8db70f226b0f6cec0717_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8c4d0f226b0f6cec0714/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8c4d0f226b0f6cec0714_name'), '/', parameters('policies_policy_name_7'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"?projectName={name}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'), parameters('operations_57ce8c4d0f226b0f6cec0714_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8b2e0f226b0f6cec0713/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8b2e0f226b0f6cec0713_name'), '/', parameters('policies_policy_name_8'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"?projectName={projectName}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'), parameters('operations_57ce8b2e0f226b0f6cec0713_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8c9b0f226b0f6cec0715/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8c9b0f226b0f6cec0715_name'), '/', parameters('policies_policy_name_9'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"?projectName={name}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'), parameters('operations_57ce8c9b0f226b0f6cec0715_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce8d470f226b0f6cec0716/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce8d470f226b0f6cec0716_name'), '/', parameters('policies_policy_name_10'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"/{name}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'), parameters('operations_57ce8d470f226b0f6cec0716_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce896e0f226b0f6cec0711/operations/57ce89b60f226b0f6cec0712/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name'), '/', parameters('operations_57ce89b60f226b0f6cec0712_name'), '/', parameters('policies_policy_name_11'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"/\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce896e0f226b0f6cec0711_name'), parameters('operations_57ce89b60f226b0f6cec0712_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/58e33be9cd797fcd01b5b357/operations/58e33cc70cd0c5f7f2be91a5'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_58e33be9cd797fcd01b5b357_name'), '/', parameters('operations_58e33cc70cd0c5f7f2be91a5_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Get Service Providers",
+                "method": "GET",
+                "urlTemplate": "/",
+                "description": "Gets all service provider details.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_58e33be9cd797fcd01b5b357_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/58e33be9cd797fcd01b5b357/operations/58e33cc70cd0c5f7f2be91a5/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_58e33be9cd797fcd01b5b357_name'), '/', parameters('operations_58e33cc70cd0c5f7f2be91a5_name'), '/', parameters('policies_policy_name_12'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"/api/get-service-providers\" />\r\n    <set-query-parameter name=\"code\" exists-action=\"override\">\r\n      <value>Xad4S0uGZtCbgCaNgvakhQrwLbB3MWYnXIy7vfyiQEOtZ9Q5ZJfafA==</value>\r\n    </set-query-parameter>\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_58e33be9cd797fcd01b5b357_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_58e33be9cd797fcd01b5b357_name'), parameters('operations_58e33cc70cd0c5f7f2be91a5_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab88d'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab88d_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Complete Task",
+                "method": "PATCH",
+                "urlTemplate": "/complete/{id}",
+                "description": "An operation to complete a specific task as identified by its Task ID.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab889'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab889_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Create Task",
+                "method": "POST",
+                "urlTemplate": "/",
+                "description": "An operation to create a new task as identified in the body of the request.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab88c'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab88c_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Delete Task",
+                "method": "DELETE",
+                "urlTemplate": "/{id}",
+                "description": "Operation to delete a task by specifying the Task ID",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab88a'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab88a_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Get Task",
+                "method": "GET",
+                "urlTemplate": "/{id}",
+                "description": "An operation to get a specific task as identified by the Task ID.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab888'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab888_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Get Tasks",
+                "method": "GET",
+                "urlTemplate": "/",
+                "description": "An operation to retrieve all the tasks in the system.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab88b'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab88b_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Update Task",
+                "method": "PUT",
+                "urlTemplate": "/{id}",
+                "description": "Update a task.",
+                "policies": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/schemas/57ce4ae90f226b0d142ab887'.",
+            "type": "Microsoft.ApiManagement/service/apis/schemas",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('schemas_57ce4ae90f226b0d142ab887_name'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "contentType": "application/vnd.ms-azure-apim.swagger.definitions+json",
+                "document": {}
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab88d/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab88d_name'), '/', parameters('policies_policy_name_13'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"/api/Task/{id}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'), parameters('operations_57ce4aeb0f226b0d142ab88d_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab889/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab889_name'), '/', parameters('policies_policy_name_14'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"/api/Task\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'), parameters('operations_57ce4aeb0f226b0d142ab889_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab88c/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab88c_name'), '/', parameters('policies_policy_name_15'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"/api/Task/{id}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'), parameters('operations_57ce4aeb0f226b0d142ab88c_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab88a/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab88a_name'), '/', parameters('policies_policy_name_16'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"/api/Task/{id}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'), parameters('operations_57ce4aeb0f226b0d142ab88a_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab888/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab888_name'), '/', parameters('policies_policy_name_17'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"/api/Task\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'), parameters('operations_57ce4aeb0f226b0d142ab888_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/apis/57ce4ae80f226b0f6cec070c/operations/57ce4aeb0f226b0d142ab88b/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name'), '/', parameters('operations_57ce4aeb0f226b0d142ab88b_name'), '/', parameters('policies_policy_name_18'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "<policies>\r\n  <inbound>\r\n    <base />\r\n    <rewrite-uri template=\"/api/Task/{id}\" />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n  <on-error>\r\n    <base />\r\n  </on-error>\r\n</policies>"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/apis/operations', variables('api_service_name'), parameters('apis_57ce4ae80f226b0f6cec070c_name'), parameters('operations_57ce4aeb0f226b0d142ab88b_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/groups/administrators/users/1'.",
+            "type": "Microsoft.ApiManagement/service/groups/users",
+            "name": "[concat(variables('api_service_name'), '/', parameters('groups_administrators_name'), '/', parameters('users_1_name_2'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "firstName": "Administrator",
+                "lastName": "",
+                "email": "nickward@microsoft.com",
+                "state": "active",
+                "registrationDate": "[concat('20', parameters('users_1_name_2'),'7-', parameters('users_1_name_2'),'0-', parameters('users_1_name_2'),'2T00:53:52.767')]",
+                "note": null,
+                "identities": [
+                    {
+                        "provider": "Azure",
+                        "id": "nickward@microsoft.com"
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/groups', variables('api_service_name'), parameters('groups_administrators_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/groups/developers/users/1'.",
+            "type": "Microsoft.ApiManagement/service/groups/users",
+            "name": "[concat(variables('api_service_name'), '/', parameters('groups_developers_name'), '/', parameters('users_1_name_1'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "firstName": "Administrator",
+                "lastName": "",
+                "email": "nickward@microsoft.com",
+                "state": "active",
+                "registrationDate": "[concat('20', parameters('users_1_name_1'),'7-', parameters('users_1_name_1'),'0-', parameters('users_1_name_1'),'2T00:53:52.767')]",
+                "note": null,
+                "identities": [
+                    {
+                        "provider": "Azure",
+                        "id": "nickward@microsoft.com"
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/groups', variables('api_service_name'), parameters('groups_developers_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060001/apis/58e33be9cd797fcd01b5b357'.",
+            "type": "Microsoft.ApiManagement/service/products/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060001_name'), '/', parameters('apis_58e33be9cd797fcd01b5b357_name_1'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Service Providers API",
+                "apiRevision": "1",
+                "description": "All our service providers are provided via this API",
+                "serviceUrl": "https://service-provider-functions.azurewebsites.net/",
+                "path": "serviceprovider",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060001_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060001/apis/57ce4ae80f226b0f6cec070c'.",
+            "type": "Microsoft.ApiManagement/service/products/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060001_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name_1'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Task API",
+                "apiRevision": "1",
+                "description": "An API for creating, completing and deleting tasks.",
+                "serviceUrl": "http://tasksservice.azurewebsites.net",
+                "path": "task",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060001_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060001/groups/administrators'.",
+            "type": "Microsoft.ApiManagement/service/products/groups",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060001_name'), '/', parameters('groups_administrators_name_1'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "[concat(parameters('groups_administrators_name_1'),'Administrators', parameters('groups_administrators_name_1'))]",
+                "description": "[concat(parameters('groups_administrators_name_1'),'Administrators is a built-in group. Its membership is managed by the system. Microsoft Azure subscription ', parameters('groups_administrators_name_1'),' fall into this group.')]",
+                "builtIn": true,
+                "type": "system",
+                "externalId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060001_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060001/groups/developers'.",
+            "type": "Microsoft.ApiManagement/service/products/groups",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060001_name'), '/', parameters('groups_developers_name_1'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "[concat(parameters('groups_developers_name_1'),'Developers', parameters('groups_developers_name_1'))]",
+                "description": "[concat(parameters('groups_developers_name_1'),'Developers is a built-in group. Its membership is managed by the system. Signed-in users fall into this group.')]",
+                "builtIn": true,
+                "type": "system",
+                "externalId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060001_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060001/groups/guests'.",
+            "type": "Microsoft.ApiManagement/service/products/groups",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060001_name'), '/', parameters('groups_guests_name_1'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "[concat(parameters('groups_guests_name_1'),'Guests', parameters('groups_guests_name_1'))]",
+                "description": "[concat(parameters('groups_guests_name_1'),'Guests is a built-in group. Its membership is managed by the system. Unauthenticated users visiting the developer portal fall into this group.')]",
+                "builtIn": true,
+                "type": "system",
+                "externalId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060001_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060001/policies/policy'.",
+            "type": "Microsoft.ApiManagement/service/products/policies",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060001_name'), '/', parameters('policies_policy_name_1'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "policyContent": "[concat('<!--\r\n            IMPORTANT:\r\n            - Policy elements can appear only within the <inbound>, <outbound>, <backend> section elements.\r\n            - Only the <forward-request> ', parameters('policies_policy_name_1'),' element can appear within the <backend> section element.\r\n            - To apply a ', parameters('policies_policy_name_1'),' to the incoming request (before it is forwarded to the backend service), place a corresponding ', parameters('policies_policy_name_1'),' element within the <inbound> section element.\r\n            - To apply a ', parameters('policies_policy_name_1'),' to the outgoing response (before it is sent back to the caller), place a corresponding ', parameters('policies_policy_name_1'),' element within the <outbound> section element.\r\n            - To add a ', parameters('policies_policy_name_1'),' position the cursor at the desired insertion point and click on the round button associated with the ', parameters('policies_policy_name_1'),'.\r\n            - To remove a ', parameters('policies_policy_name_1'),', delete the corresponding ', parameters('policies_policy_name_1'),' statement from the ', parameters('policies_policy_name_1'),' document.\r\n            - Position the <base> element within a section element to inherit all policies from the corresponding section element in the enclosing scope.\r\n            - Remove the <base> element to prevent inheriting policies from the corresponding section element in the enclosing scope.\r\n            - Policies are applied in the order of their appearance, from the top down.\r\n        -->\r\n<policies>\r\n  <inbound>\r\n    <rate-limit calls=\"5\" renewal-period=\"60\" />\r\n    <quota calls=\"100\" renewal-period=\"604800\" />\r\n    <base />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n</policies>')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060001_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060002/apis/57ce4e6c0f226b0f6cec070d'.",
+            "type": "Microsoft.ApiManagement/service/products/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060002_name'), '/', parameters('apis_57ce4e6c0f226b0f6cec070d_name_1'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Notification API",
+                "apiRevision": "1",
+                "description": "An API to send e-mail and push notifications when tasks are completed.",
+                "serviceUrl": "https://prod-03.australiasoutheast.logic.azure.com:443",
+                "path": "notifications",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060002_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060002/apis/57ce896e0f226b0f6cec0711'.",
+            "type": "Microsoft.ApiManagement/service/products/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060002_name'), '/', parameters('apis_57ce896e0f226b0f6cec0711_name_1'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Project API",
+                "apiRevision": "1",
+                "description": "An API for creating, managing, completing and adding tasks to projects.",
+                "serviceUrl": "http://cadclusterkyfdbfrmncr7i.australiasoutheast.cloudapp.azure.com/api/project",
+                "path": "project",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060002_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060002/apis/58e33be9cd797fcd01b5b357'.",
+            "type": "Microsoft.ApiManagement/service/products/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060002_name'), '/', parameters('apis_58e33be9cd797fcd01b5b357_name_2'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Service Providers API",
+                "apiRevision": "1",
+                "description": "All our service providers are provided via this API",
+                "serviceUrl": "https://service-provider-functions.azurewebsites.net/",
+                "path": "serviceprovider",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060002_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060002/apis/57ce4ae80f226b0f6cec070c'.",
+            "type": "Microsoft.ApiManagement/service/products/apis",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060002_name'), '/', parameters('apis_57ce4ae80f226b0f6cec070c_name_2'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Task API",
+                "apiRevision": "1",
+                "description": "An API for creating, completing and deleting tasks.",
+                "serviceUrl": "http://tasksservice.azurewebsites.net",
+                "path": "task",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060002_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060002/groups/administrators'.",
+            "type": "Microsoft.ApiManagement/service/products/groups",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060002_name'), '/', parameters('groups_administrators_name_2'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "[concat(parameters('groups_administrators_name_2'),'Administrators', parameters('groups_administrators_name_2'))]",
+                "description": "[concat(parameters('groups_administrators_name_2'),'Administrators is a built-in group. Its membership is managed by the system. Microsoft Azure subscription ', parameters('groups_administrators_name_2'),' fall into this group.')]",
+                "builtIn": true,
+                "type": "system",
+                "externalId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060002_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060002/groups/developers'.",
+            "type": "Microsoft.ApiManagement/service/products/groups",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060002_name'), '/', parameters('groups_developers_name_2'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "[concat(parameters('groups_developers_name_2'),'Developers', parameters('groups_developers_name_2'))]",
+                "description": "[concat(parameters('groups_developers_name_2'),'Developers is a built-in group. Its membership is managed by the system. Signed-in users fall into this group.')]",
+                "builtIn": true,
+                "type": "system",
+                "externalId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060002_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/114d25c4-3f8f-4c41-83b1-22007178fc8c/resourcegroups/apim/providers/Microsoft.ApiManagement/service/hectagonapi/products/57ce3a3ebff1b90080060002/groups/guests'.",
+            "type": "Microsoft.ApiManagement/service/products/groups",
+            "name": "[concat(variables('api_service_name'), '/', parameters('products_57ce3a3ebff1b90080060002_name'), '/', parameters('groups_guests_name_2'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "[concat(parameters('groups_guests_name_2'),'Guests', parameters('groups_guests_name_2'))]",
+                "description": "[concat(parameters('groups_guests_name_2'),'Guests is a built-in group. Its membership is managed by the system. Unauthenticated users visiting the developer portal fall into this group.')]",
+                "builtIn": true,
+                "type": "system",
+                "externalId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service', variables('api_service_name'))]",
+                "[resourceId('Microsoft.ApiManagement/service/products', variables('api_service_name'), parameters('products_57ce3a3ebff1b90080060002_name'))]"
+            ]
+        }
+    ]
+}
